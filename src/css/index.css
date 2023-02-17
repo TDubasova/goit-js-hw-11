@@ -52,29 +52,27 @@ a {
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-    gap: 10px;
+    display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2vw;
     
     padding: 0;
     margin-top: 65px;
 }
 
 .photo-card {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 20%;
     border-radius: 2px;
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
             0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 
 .photo-card img {
+    display: block;
     width: 400px;
     height: 300px;
-    display: block;
+    object-fit: cover;
+    
 }
 
 .info {
