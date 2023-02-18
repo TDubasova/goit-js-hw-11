@@ -3,7 +3,6 @@
 }
 
 body {
-    max-width: 1263px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -18,8 +17,10 @@ body {
 .search-form { 
     position: fixed;
     top: 0;
+    padding: 10px;
     height: 60px;
     width: 100%;
+    text-align: center;
     background-color: blue;
     box-shadow:
             0px 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -28,17 +29,12 @@ body {
 }
 
 .search-form input {
-    position: absolute;
-    top: 10px;
-    left: 512px;
-    margin: auto;
+    margin: 0 auto;
+    width: 200px;
     height: 40px;
 }
 
 .search-form button {
-    position: absolute;
-    top: 10px;
-    left: 689px;
     width: 100px;
     height: 40px;
     box-shadow:
@@ -72,21 +68,17 @@ body {
 }
 
 .gallery {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: -15px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-auto-rows: 330px;
+    grid-row-gap: 1em;
+    grid-column-gap: 1em;
+    margin: 0 auto;
     padding: 0;
     margin-top: 65px;
 }
 
 a {
-    flex-direction: column;
-    height: 320px;
-    width: 300px;
-    margin-bottom: 10px;
     text-decoration: none;
     color: black;
     border-radius: 2px;
@@ -99,10 +91,6 @@ a {
 a:hover,
 a:focus {
     box-shadow: 10px 5px 5px gray;
-}
-
-.photo-card {
-    height: 250px; 
 }
 
 img {
