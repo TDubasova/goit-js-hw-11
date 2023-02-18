@@ -69,10 +69,11 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-columns: 300px repeat(auto-fill, 300px) 300px;
     grid-auto-rows: 330px;
     grid-row-gap: 1em;
     grid-column-gap: 1em;
+    justify-content: space-around;
     margin: 0 auto;
     padding: 0;
     margin-top: 65px;
